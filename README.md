@@ -6,7 +6,7 @@ Follow these basic steps to create framework from scratch
 
 |
 |-Features
-|---Steps 
+|---Steps --> login.py
 |---login.feature
 
 
@@ -16,7 +16,7 @@ Follow these basic steps to create framework from scratch
 5. Open terminal prompt and run below command to install behave on the project path
 pip install behave
    
-6. Run below dry run command and get all the required  missing steps to enter in "Steps" --> "StepDefinition" file
+6. Run below dry run command and get all the required  missing steps to enter in "Steps" --> login.py i.e. a Step Definition file
 behave login.feature
 
 7. 
