@@ -5,9 +5,9 @@ Follow these basic steps to create framework from scratch
 3. Create below folder and files
 
 |
-|---Features--
-              |---Steps 
-              |---login.feature
+|-Features
+|---Steps 
+|---login.feature
 
 
 4. Write test cases in login.feature file as per requirement
