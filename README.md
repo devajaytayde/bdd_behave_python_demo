@@ -22,23 +22,34 @@ behave login.feature
 7. Import basic libraries from "behave" like 'given/then/when' and 'selenium webdriver'
 and remove exception/error lines -
 
- from behave import when
+from behave import when
 from behave import then
 from behave import given
 from behave import *
 from selenium import webdriver
-
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from behave.api.pending_step import StepNotImplementedError
-@when(u'open OrangeHRM home page')
+
+
+@when('open OrangeHRM home page')
 def launchbrowswer(context):
-    raise StepNotImplementedError(u'When open OrangeHRM home page')
+    #context.driver = webdriver.Edge(executable_path="C:\\Users\\AjayTayde\\SDET\\workspace\\library\\edgedriver_win64\\msedgedriver.exe")
+    context.driver = webdriver.Chrome()
+    context.driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
 
-
-@then(u'Verify logo is present on Home Page')
+@then('Verify logo is present on Home Page')
 def verifylogo(context):
-    raise StepNotImplementedError(u'Then Verify logo is present on Home Page')
+    element = WebDriverWait(context.driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//img[@src='/web/images/ohrm_branding.png?v=1763650546848']")))
+    status = context.driver.find_element(By.XPATH,("//img[@src='/web/images/ohrm_branding.png?v=1763650546848']")).is_displayed()
+    assert status is True
 
-
-@then(u'close the browser')
+@then('close the browser')
 def closebrowser(context):
-    raise StepNotImplementedError(u'Then close the browser')
+    context.driver.close()
+
+
+
+
+    
