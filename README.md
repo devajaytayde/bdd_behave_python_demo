@@ -51,5 +51,14 @@ def closebrowser(context):
 
 
 
+Hooks in Behave - 
+before_step(context, step), after_step(context, step) – Executed before and after every step.
+before_scenario(context, scenario), after_scenario(context, scenario) – Executed before and after every scenario.
+before_scenario(context, feature), after_scenario(context, feature) – Executed before and after every feature.
+before_all(context), after_all(context) – Executed before and after the execution of the entire test cycle.
+
+
+
+
 
     
