@@ -1,4 +1,4 @@
-# bdd_behave_python_demo
+# bdd_behave_python_OrangeHRM
 Follow these basic steps to create framework from scratch
 1. Install "**PyCharm**" for Windows
 2. Create new Project
@@ -46,15 +46,32 @@ and remove exception/error lines -
                          context.driver.close()
 
 
-8. **Hooks in Behave -**
-   
+
+
+
+
+
+**Important Notes-**
+# How to Debug in PyCharm
+1. Go to BDD Behave feature file and  right click to "Debug"
+
+**Step Over (F8):** Executes the current line of code and moves to the next line. If the current line contains a function call, it will execute the entire function and pause on the next line after the function call.
+
+**Step Into (F7):** Moves the debugger into the function call, allowing you to step through the function's code line by line.
+
+**Step Out (Shift+F8):** Executes the remaining lines of the current function and returns to the function that is called.
+
+**Resume Program (F9):** Continues execution until the next breakpoint is encountered or if no break point was found it executes till the end of a program.
+
+# **Hooks in Behave -**
+
 **before_step(context, step), after_step(context, step)** – Executed before and after every step.
+
 **before_scenario(context, scenario), after_scenario(context, scenario) –** Executed before and after every scenario.
+
 **before_scenario(context, feature), after_scenario(context, feature) –** Executed before and after every feature.
+
 **before_all(context), after_all(context) –** Executed before and after the execution of the entire test cycle.
-
-
-
 
 
 
@@ -62,7 +79,7 @@ and remove exception/error lines -
 Important links-
 https://superfastpython.com/thread-local-data/
 https://selenium-python.readthedocs.io/api.html
-
+https://www.geeksforgeeks.org/python/how-to-perform-debugging-in-python-pycharm/
 
 
     
